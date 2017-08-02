@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CalcComponent {
 
-  private data: BaseCalc;
+  public data: BaseCalc;
 
   constructor(private router: Router) { 
     this.data = new BaseCalc();
@@ -62,8 +62,8 @@ export class BaseCalc {
 
     this.totalRevenue = this.annualRevenue * this.customerNumber;
 
-    this.depositsToPortfolio = 15;
-    this.yieldOnPortfolio = 3;
+    this.depositsToPortfolio = 3;
+    this.yieldOnPortfolio = 15;
     
     for (let i = 0; i < 10; i++) {
       if (i == 0) {

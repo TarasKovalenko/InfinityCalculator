@@ -1,8 +1,7 @@
-<nav class="navbar" style="background-color: #2e3f71;
-    border-radius: 0;">
+<nav class="navbar">
   <div class="container-fluid">
-    <div class="navbar-header" style="float: right;">
-      <a class="navbar-brand" href="#" style="color: white;">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">
 		    אינפיניטי - בית השקעות
 		  </a>
     </div>
@@ -12,74 +11,112 @@
   </div>
 </nav>
 
-<div style="margin-top:-15px" class="container nav_super">
-  <a href="http://infinity.co.il">
-			<img src="http://infinity.co.il/images/logo.png" style="width: 7%;float: right;margin-top: 1%;margin-right:15px;" alt="">
-    </a>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="text-align: center;">
+      <a href="http://infinity.co.il">
+        <img src="http://infinity.co.il/images/logo.png" style="width: 30%;">
+      </a>
+    </div>
+    <div class="hidden-xs hidden-sm hidden-md col-lg-12" style="text-align: right;">
+      <a href="http://infinity.co.il">
+			  <img src="http://infinity.co.il/images/logo.png" style="width: 10%;">
+      </a>
+    </div>
+  </div>
 </div>
 
 <div class="container">
-  <p class="h3" style="text-align: center;">מחשבון עמלות לשותף אינפיניטי</p>
+  <p class="h3 text-center">מחשבון עמלות לשותף אינפיניטי</p>
 </div>
 
 <div class="container" style="direction: rtl;">
-  <div class="row ">
-    <div class="col-md-10" style="direction: rtl;">
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="direction: rtl;">
+      <p>גודל תיק ממוצע באינפיניטי</p>
+      <p><input type="number" class="form-control input-sm" [(ngModel)]="data.basicScope" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" [(ngModel)]="data.basicScope" (keyup)='calcFunction()'></p>
     </div>
-    <div class="col-md-2">
+    <div class="hidden-xs hidden-sm hidden-md col-lg-2">
       <p>גודל תיק ממוצע באינפיניטי</p>
     </div>
   </div>
-  <div class="row ">
-    <div class="col-md-10" style="direction: rtl;">
+
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="direction: rtl;">
+      <p>הכנסת שנתית ממוצעת מלקוח</p>
+      <p><input type="number" readonly class="form-control input-sm" [(ngModel)]="data.annualRevenue" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" readonly [(ngModel)]="data.annualRevenue" (keyup)='calcFunction()'></p>
     </div>
-    <div class="col-md-2">
+    <div class="hidden-xs hidden-sm hidden-md col-lg-2">
       <p>הכנסת שנתית ממוצעת מלקוח</p>
     </div>
   </div>
 
-  <div class="row ">
-    <div class="col-md-10" style="direction: rtl;">
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="direction: rtl;">
+      <p>כמות לקוחות</p>
+      <p><input type="number" class="form-control input-sm" [(ngModel)]="data.customerNumber" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" [(ngModel)]="data.customerNumber" (keyup)='calcFunction()'></p>
     </div>
-    <div class="col-md-2">
+    <div class="hidden-xs hidden-sm hidden-md col-lg-2">
       <p>כמות לקוחות</p>
     </div>
   </div>
 
-  <div class="row ">
-    <div class="col-md-10" style="direction: rtl;">
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="direction: rtl;">
+      <p>הכנסה כוללת</p>
+      <p><input type="number" class="form-control input-sm" readonly [(ngModel)]="data.totalRevenue" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" readonly [(ngModel)]="data.totalRevenue" (keyup)='calcFunction()'></p>
     </div>
-    <div class="col-md-2">
+    <div class="hidden-xs hidden-sm hidden-md col-lg-2">
       <p>הכנסה כוללת</p>
     </div>
   </div>
 
-  <div class="row ">
-    <div class="col-md-10" style="direction: rtl;">
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="direction: rtl;">
+      <p>תשואת תיק ממוצעת</p>
       <p style="display: flex;">
         <label for="id1">%</label>
-        <input id="id1" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio"
-        />
+        <input id="id1" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio" />
       </p>
     </div>
-    <div class="col-md-2">
+    <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
+      <p style="display: flex;">
+        <label for="id1">%</label>
+        <input id="id1" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio" />
+      </p>
+    </div>
+    <div class="hidden-xs hidden-sm hidden-md col-lg-2">
       <p>תשואת תיק ממוצעת</p>
     </div>
   </div>
 
   <div class="row ">
-    <div class="col-md-10" style="direction: rtl;">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="direction: rtl;">
+      <p>ממוצע הפקדות</p>
       <p style="display: flex;">
         <label for="id2">%</label>
-        <input id="id2" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"
-        />
+        <input id="id2" type="number" class="form-control input-sm"  style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"/>
       </p>
     </div>
-    <div class="col-md-2">
+    <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
+      <p style="display: flex;">
+        <label for="id2">%</label>
+        <input id="id2" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"/>
+      </p>
+    </div>
+    <div class="hidden-xs hidden-sm hidden-md col-lg-2">
       <p>ממוצע הפקדות</p>
     </div>
   </div>
@@ -87,35 +124,26 @@
 </div>
 
 <div class="container" style="margin-top: 15px;">
-  <h4 style="direction: rtl;">עמלת שותף מחושבת לפי שנים</h4>
+  <h4 class="text-right">עמלת שותף מחושבת לפי שנים</h4>
   <div class="table-responsive">
-    <table class="table table-bordered">
+    <table class="table table-bordered text-right">
       <thead>
         <tr>
-          <th>מצטבר</th>
-          <th>10</th>
-          <th>9</th>
-          <th>8</th>
-          <th>7</th>
-          <th>6</th>
-          <th>6</th>
-          <th>4</th>
-          <th>3</th>
-          <th>2</th>
-          <th>1</th>
-          <th>שנה</th>
+          <th class="text-right">מצטבר</th>
+          <th *ngFor="let i of [10,9,8,7,6,5,4,3,2,1]" class="text-right">{{i}} שנה</th>
+          <th class="text-right">שנה</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td> {{data.summ | number : '1.2-2'}} </td>
+          <td><b>{{data.summ | number : '1.2-2'}}</b></td>
           <td *ngFor="let key of data.years;">{{key | number : '1.0'}}</td>
-          <td>הכנסה</td>
+          <td><b>הכנסה </b></td>
         </tr>
         <tr>
           <td></td>
           <td *ngFor="let key of data.brutoByYear;">{{key | number : '1.0'}}</td>
-          <td>תוספת לברוטו</td>
+          <td><b>תוספת לברוטו </b></td>
         </tr>
       </tbody>
     </table>
