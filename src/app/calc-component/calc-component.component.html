@@ -1,0 +1,123 @@
+<nav class="navbar" style="background-color: #2e3f71;
+    border-radius: 0;">
+  <div class="container-fluid">
+    <div class="navbar-header" style="float: right;">
+      <a class="navbar-brand" href="#" style="color: white;">
+		    אינפיניטי - בית השקעות
+		  </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="" (click)="logOut()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div style="margin-top:-15px" class="container nav_super">
+  <a href="http://infinity.co.il">
+			<img src="http://infinity.co.il/images/logo.png" style="width: 7%;float: right;margin-top: 1%;margin-right:15px;" alt="">
+    </a>
+</div>
+
+<div class="container">
+  <p class="h3" style="text-align: center;">מחשבון עמלות לשותף אינפיניטי</p>
+</div>
+
+<div class="container" style="direction: rtl;">
+  <div class="row ">
+    <div class="col-md-10" style="direction: rtl;">
+      <p><input type="number" [(ngModel)]="data.basicScope" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="col-md-2">
+      <p>גודל תיק ממוצע באינפיניטי</p>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-10" style="direction: rtl;">
+      <p><input type="number" readonly [(ngModel)]="data.annualRevenue" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="col-md-2">
+      <p>הכנסת שנתית ממוצעת מלקוח</p>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-md-10" style="direction: rtl;">
+      <p><input type="number" [(ngModel)]="data.customerNumber" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="col-md-2">
+      <p>כמות לקוחות</p>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-md-10" style="direction: rtl;">
+      <p><input type="number" readonly [(ngModel)]="data.totalRevenue" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="col-md-2">
+      <p>הכנסה כוללת</p>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-md-10" style="direction: rtl;">
+      <p style="display: flex;">
+        <label for="id1">%</label>
+        <input id="id1" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio"
+        />
+      </p>
+    </div>
+    <div class="col-md-2">
+      <p>תשואת תיק ממוצעת</p>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-md-10" style="direction: rtl;">
+      <p style="display: flex;">
+        <label for="id2">%</label>
+        <input id="id2" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"
+        />
+      </p>
+    </div>
+    <div class="col-md-2">
+      <p>ממוצע הפקדות</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="container" style="margin-top: 15px;">
+  <h4 style="direction: rtl;">עמלת שותף מחושבת לפי שנים</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>מצטבר</th>
+          <th>10</th>
+          <th>9</th>
+          <th>8</th>
+          <th>7</th>
+          <th>6</th>
+          <th>6</th>
+          <th>4</th>
+          <th>3</th>
+          <th>2</th>
+          <th>1</th>
+          <th>שנה</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> {{data.summ | number : '1.2-2'}} </td>
+          <td *ngFor="let key of data.years;">{{key | number : '1.0'}}</td>
+          <td>הכנסה</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td *ngFor="let key of data.brutoByYear;">{{key | number : '1.0'}}</td>
+          <td>תוספת לברוטו</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
