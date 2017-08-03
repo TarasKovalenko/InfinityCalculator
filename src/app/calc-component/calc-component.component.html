@@ -18,6 +18,16 @@
         <img src="http://infinity.co.il/images/logo.png" style="width: 30%;">
       </a>
     </div>
+    <div class="hidden-xs col-sm-12 hidden-md hidden-lg" style="text-align: right;">
+      <a href="http://infinity.co.il">
+			  <img src="http://infinity.co.il/images/logo.png" style="width: 10%;">
+      </a>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 hidden-lg" style="text-align: right;">
+      <a href="http://infinity.co.il">
+			  <img src="http://infinity.co.il/images/logo.png" style="width: 10%;">
+      </a>
+    </div>
     <div class="hidden-xs hidden-sm hidden-md col-lg-12" style="text-align: right;">
       <a href="http://infinity.co.il">
 			  <img src="http://infinity.co.il/images/logo.png" style="width: 10%;">
@@ -36,6 +46,15 @@
       <p>גודל תיק ממוצע באינפיניטי</p>
       <p><input type="number" class="form-control input-sm" [(ngModel)]="data.basicScope" (keyup)='calcFunction()'></p>
     </div>
+    <div class="hidden-xs col-sm-12 hidden-md hidden-lg" style="direction: rtl;">
+      <p>גודל תיק ממוצע באינפיניטי</p>
+      <p><input type="number" class="form-control input-sm" [(ngModel)]="data.basicScope" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 hidden-lg" style="direction: rtl;">
+      <p>גודל תיק ממוצע באינפיניטי</p>
+      <p><input type="number" class="form-control input-sm" [(ngModel)]="data.basicScope" (keyup)='calcFunction()'></p>
+    </div>
+
     <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" [(ngModel)]="data.basicScope" (keyup)='calcFunction()'></p>
     </div>
@@ -49,6 +68,15 @@
       <p>הכנסת שנתית ממוצעת מלקוח</p>
       <p><input type="number" readonly class="form-control input-sm" [(ngModel)]="data.annualRevenue" (keyup)='calcFunction()'></p>
     </div>
+    <div class="hidden-xs col-sm-12 hidden-md hidden-lg" style="direction: rtl;">
+      <p>הכנסת שנתית ממוצעת מלקוח</p>
+      <p><input type="number" readonly class="form-control input-sm" [(ngModel)]="data.annualRevenue" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 hidden-lg" style="direction: rtl;">
+      <p>הכנסת שנתית ממוצעת מלקוח</p>
+      <p><input type="number" readonly class="form-control input-sm" [(ngModel)]="data.annualRevenue" (keyup)='calcFunction()'></p>
+    </div>
+
     <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" readonly [(ngModel)]="data.annualRevenue" (keyup)='calcFunction()'></p>
     </div>
@@ -62,6 +90,15 @@
       <p>כמות לקוחות</p>
       <p><input type="number" class="form-control input-sm" [(ngModel)]="data.customerNumber" (keyup)='calcFunction()'></p>
     </div>
+    <div class="hidden-xs col-sm-12 hidden-md hidden-lg" style="direction: rtl;">
+      <p>כמות לקוחות</p>
+      <p><input type="number" class="form-control input-sm" [(ngModel)]="data.customerNumber" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 hidden-lg" style="direction: rtl;">
+      <p>כמות לקוחות</p>
+      <p><input type="number" class="form-control input-sm" [(ngModel)]="data.customerNumber" (keyup)='calcFunction()'></p>
+    </div>
+
     <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" [(ngModel)]="data.customerNumber" (keyup)='calcFunction()'></p>
     </div>
@@ -75,6 +112,15 @@
       <p>הכנסה כוללת</p>
       <p><input type="number" class="form-control input-sm" readonly [(ngModel)]="data.totalRevenue" (keyup)='calcFunction()'></p>
     </div>
+    <div class="hidden-xs col-sm-12 hidden-md hidden-lg" style="direction: rtl;">
+      <p>הכנסה כוללת</p>
+      <p><input type="number" class="form-control input-sm" readonly [(ngModel)]="data.totalRevenue" (keyup)='calcFunction()'></p>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 hidden-lg" style="direction: rtl;">
+      <p>הכנסה כוללת</p>
+      <p><input type="number" class="form-control input-sm" readonly [(ngModel)]="data.totalRevenue" (keyup)='calcFunction()'></p>
+    </div>
+
     <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p><input type="number" readonly [(ngModel)]="data.totalRevenue" (keyup)='calcFunction()'></p>
     </div>
@@ -88,13 +134,32 @@
       <p>תשואת תיק ממוצעת</p>
       <p style="display: flex;">
         <label for="id1">%</label>
-        <input id="id1" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio" />
+        <input id="id1" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio"
+        />
       </p>
     </div>
+    <div class="hidden-xs col-sm-12 hidden-md hidden-lg" style="direction: rtl;">
+      <p>תשואת תיק ממוצעת</p>
+      <p style="display: flex;">
+        <label for="id1">%</label>
+        <input id="id1" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio"
+        />
+      </p>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 hidden-lg" style="direction: rtl;">
+      <p>תשואת תיק ממוצעת</p>
+      <p style="display: flex;">
+        <label for="id1">%</label>
+        <input id="id1" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio"
+        />
+      </p>
+    </div>
+
     <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p style="display: flex;">
         <label for="id1">%</label>
-        <input id="id1" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio" />
+        <input id="id1" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.depositsToPortfolio"
+        />
       </p>
     </div>
     <div class="hidden-xs hidden-sm hidden-md col-lg-2">
@@ -107,13 +172,32 @@
       <p>ממוצע הפקדות</p>
       <p style="display: flex;">
         <label for="id2">%</label>
-        <input id="id2" type="number" class="form-control input-sm"  style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"/>
+        <input id="id2" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"
+        />
       </p>
     </div>
+    <div class="hidden-xs col-sm-12 hidden-md hidden-lg" style="direction: rtl;">
+      <p>ממוצע הפקדות</p>
+      <p style="display: flex;">
+        <label for="id2">%</label>
+        <input id="id2" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"
+        />
+      </p>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 hidden-lg" style="direction: rtl;">
+      <p>ממוצע הפקדות</p>
+      <p style="display: flex;">
+        <label for="id2">%</label>
+        <input id="id2" type="number" class="form-control input-sm" style="margin-right: 3px;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"
+        />
+      </p>
+    </div>
+
     <div class="hidden-xs hidden-sm hidden-md col-lg-10" style="direction: rtl;">
       <p style="display: flex;">
         <label for="id2">%</label>
-        <input id="id2" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"/>
+        <input id="id2" type="number" style="margin-right: 3px; width: 14%;" (keyup)='calcFunction()' [(ngModel)]="data.yieldOnPortfolio"
+        />
       </p>
     </div>
     <div class="hidden-xs hidden-sm hidden-md col-lg-2">
