@@ -1,17 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-calc-component',
   templateUrl: './calc-component.component.html',
   styleUrls: ['./calc-component.component.css']
 })
-export class CalcComponent {
+export class CalcComponent implements OnInit {
 
   public data: BaseCalc;
+  public commition: number = 0.2;
 
-  constructor(private router: Router) { 
-    this.data = new BaseCalc();
+  constructor(private router: Router, private route: ActivatedRoute) {
+  }
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params: Params) => {
+      if (params['commition']) {
+        this.commition = params['commition'];
+      }
+    });
+
+    if (this.commition) {
+      this.data = new BaseCalc(this.commition);
+    }
   }
 
   logOut() {
@@ -21,7 +33,7 @@ export class CalcComponent {
 
   calcFunction() {
     this.data.totalRevenue = this.data.annualRevenue * this.data.customerNumber;
-    this.data.annualRevenue = 0.2 * this.data.basicScope / 100;
+    this.data.annualRevenue = this.commition * this.data.basicScope / 100;
 
     for (let i = 0; i < 10; i++) {
       if (i == 0) {
@@ -55,16 +67,16 @@ export class BaseCalc {
   public brutoByYear: number[] = [];
   public summ: number;
 
-  constructor() {
+  constructor(commition: number = 0.2) {
     this.basicScope = 1000000;
-    this.annualRevenue = 0.2 * this.basicScope / 100;
+    this.annualRevenue = commition * this.basicScope / 100;
     this.customerNumber = 100;
 
     this.totalRevenue = this.annualRevenue * this.customerNumber;
 
     this.depositsToPortfolio = 3;
     this.yieldOnPortfolio = 15;
-    
+
     for (let i = 0; i < 10; i++) {
       if (i == 0) {
         this.years[i] = this.totalRevenue;
